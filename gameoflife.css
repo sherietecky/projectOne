@@ -1,0 +1,326 @@
+@import url("https://fonts.googleapis.com/css2?family=Silkscreen&display=swap");
+* {
+  margin-top: 0px;
+}
+
+body {
+  transition: 1s;
+  margin-left: 15%;
+  margin-right: 15%;
+  font-family: "Silkscreen", cursive, sans-serif;
+  background: -webkit-radial-gradient(
+    center,
+    circle,
+    rgb(255, 227, 232) 10%,
+    pink
+  );
+}
+
+body.active {
+  /* background: rgb(11, 41, 104); */
+  background: -webkit-radial-gradient(
+    center,
+    circle,
+    rgb(41, 17, 91) 20%,
+    rgb(0, 0, 0)
+  );
+}
+
+/* ////////////top part styling///////////////*/
+
+.top {
+  display: flex;
+  justify-content: space-between;
+}
+
+h1 {
+  font-size: 2rem;
+  padding-left: 20px;
+  margin-top: 15px;
+  color: rgb(0, 0, 0);
+  text-shadow: 0px 6px whitesmoke;
+}
+
+h1.active {
+  color: white;
+  text-shadow: none;
+}
+
+/* ////////////theme switch///////////////*/
+#toggle {
+  position: relative;
+  display: block;
+  width: 100px;
+  height: 50px;
+  border-radius: 25px;
+  background: rgb(150, 171, 208);
+  transition: 1s;
+  cursor: pointer;
+  box-shadow: inset 0 8px 60px rgba(0, 0, 0, 0.1),
+    inset 0 8px 8px rgba(0, 0, 0, 0.1), inset 0 -4px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 15px;
+  margin-right: 15px;
+}
+
+#toggle.active {
+  background: whitesmoke;
+  box-shadow: inset 0 2px 60px rgba(0, 0, 0, 0.1),
+    inset 0 2px 8px rgba(0, 0, 0, 0.1), inset 0 -4px 4px rgba(0, 0, 0, 0.05);
+}
+
+#toggle .indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(
+    to bottom,
+    rgb(44, 48, 161),
+    rgba(2, 3, 48, 0.902)
+  );
+  border-radius: 50%;
+  transform: scale(0.9);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5),
+    inset 0 4px 4px rgba(255, 255, 255, 0.2),
+    inset 0 -4px 4px rgba(255, 255, 255, 0.2);
+  transition: 0.5s;
+}
+
+#toggle.active .indicator {
+  left: 50px;
+  background: linear-gradient(
+    to bottom,
+    rgb(255, 211, 240),
+    rgba(255, 97, 215, 0.902)
+  );
+  box-shadow: inset 0 2px 20px rgba(0, 0, 0, 0.1),
+    inset 0 2px 8px rgba(255, 255, 255, 1),
+    inset 0 -4px 8px rgba(255, 255, 255, 1);
+  transition: 0.5s;
+}
+
+/* ////////////canvas///////////////*/
+
+#canvas {
+  margin-bottom: 25px;
+  border-bottom: 40px;
+  border-top: 15px;
+  border-left: 15px;
+  border-right: 15px;
+  border-color: rgb(160, 160, 161);
+  border-style: solid;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5),
+    0 -5px 20px rgba(220, 172, 172, 0.3);
+  display: relative;
+  overflow: hidden;
+}
+
+#canvas.active {
+  margin-bottom: 25px;
+  border-bottom: 40px;
+  border-top: 15px;
+  border-left: 15px;
+  border-right: 15px;
+  border-color: rgb(32, 32, 52);
+  border-style: solid;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), 0 -5px 20px rgb(255, 225, 225);
+  display: relative;
+  overflow: hidden;
+}
+
+/* ////////////controls panel///////////////*/
+.controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sliderContainer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* ////////////framerate slider///////////////*/
+
+.frText {
+  font-weight: 400;
+  font-size: 1rem;
+  color: grey;
+}
+
+/* .frText.active {
+  font-weight: 400;
+  font-size: 1rem;
+  color: pink;
+  position: relative;
+} */
+
+#rangeValue {
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: #a763e3;
+  position: relative;
+}
+#rangeValue.active {
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: rgb(255, 255, 255);
+  position: relative;
+}
+.slider {
+  width: 260px;
+  height: 25px;
+  -webkit-appearance: none;
+  background: #111;
+  outline: none;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 1);
+}
+
+.slider:hover {
+  box-shadow: 0px 5px 15px lightgoldenrodyellow;
+}
+
+.slider.active {
+  width: 260px;
+  height: 25px;
+  -webkit-appearance: none;
+  background: #111;
+  outline: none;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: inset 0 0 5px rgb(255, 255, 255);
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 40%;
+  background: #f9beea;
+  cursor: pointer;
+  border: 4px solid rgb(255, 255, 255);
+  box-shadow: -407px 0 0 400px #a763e3;
+}
+
+.slider.active:hover {
+  box-shadow: 0px 2px 15px white;
+}
+
+.slider.active::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 40%;
+  background: #ffffff;
+  cursor: pointer;
+  border: 4px solid #656565;
+  box-shadow: -407px 0 0 400px #25ff54;
+}
+
+/* ////////////buttons///////////////*/
+
+.button {
+  background-color: white;
+  padding: 10px 15px 10px 15px;
+  /* font-size: large; */
+  margin: 5px;
+  cursor: pointer;
+  font-family: "Silkscreen", cursive, sans-serif;
+  transition: transform;
+}
+
+.button:hover {
+  box-shadow: 0px 5px 15px white;
+}
+
+.button:active {
+  transform: scale(0.9);
+}
+
+#run {
+  background-color: lightskyblue;
+}
+
+#reset-game {
+  background-color: rosybrown;
+}
+
+/* ////////////rules change///////////////*/
+h2 {
+  color: rgb(0, 0, 0);
+  font-size: smaller;
+}
+
+h2.active {
+  color: white;
+  font-size: smaller;
+}
+
+p {
+  font-size: smaller;
+  line-height: 10px;
+  display: inline;
+}
+
+p.active {
+  color: lightpink;
+}
+
+form {
+  display: inline;
+}
+
+.input-number {
+  font-family: "Silkscreen", cursive, sans-serif;
+  width: 60px;
+  height: 40px;
+  padding: 0 12px;
+  /* vertical-align: top; */
+  text-align: right;
+  outline: none;
+  border: 1px solid #ccc;
+  height: 40px;
+  user-select: none;
+}
+
+.input-number-decrement,
+.input-number-increment {
+  display: inline-block;
+  width: 30px;
+  line-height: 38px;
+  background: #f1f1f1;
+  color: #444;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  height: 40px;
+  user-select: none;
+}
+
+.input-number-decrement:active,
+.input-number-increment:active {
+  background: rgb(248, 255, 201);
+  transform: scale(1.2);
+}
+
+.input-number-decrement {
+  border-right: none;
+  border-radius: 8px 0 0 8px;
+}
+
+.input-number-increment {
+  border-left: none;
+  border-radius: 0 8px 8px 0;
+}

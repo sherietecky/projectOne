@@ -1,0 +1,374 @@
+@import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
+@import url("https://fonts.googleapis.com/css2?family=DynaPuff&family=Silkscreen&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Aboreto&family=DynaPuff&family=Silkscreen&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: ‘cwTeXYen’, sans-serif;
+  font-weight: 300;
+  line-height: 2;
+  box-sizing: border-box;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+.eng {
+  font-family: "Aboreto", cursive;
+  text-transform: uppercase;
+}
+
+body {
+  background-color: darkgrey;
+}
+
+.container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+/* say hi section */
+
+.helloSection {
+  background-color: rgb(248, 234, 221);
+  height: 100vh;
+  color: rgb(161, 152, 137);
+  padding-top: 20%;
+  padding-left: 30%;
+  text-align: left;
+  scroll-snap-align: start;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+ul li {
+  list-style: none;
+  color: rgb(154, 134, 111);
+  font-size: 80px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: "Aboreto", cursive;
+  animation: lighting 2s linear infinite;
+}
+
+@keyframes lighting {
+  0% {
+    color: rgb(206, 181, 152);
+    text-shadow: none;
+  }
+
+  90% {
+    color: rgb(154, 134, 111);
+    text-shadow: none;
+  }
+
+  100% {
+    color: rgb(255, 252, 223);
+    text-shadow: 0 0 7px #fffedd, 0 0 50px #ffffff;
+  }
+}
+
+ul li:nth-child(1) {
+  animation-delay: 0;
+}
+
+ul li:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+ul li:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+ul li:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+ul li:nth-child(5) {
+  animation-delay: 0.4s;
+}
+
+ul li:nth-child(6) {
+  animation-delay: 0.5s;
+}
+
+ul li:nth-child(7) {
+  animation-delay: 0.6s;
+}
+
+ul li:nth-child(8) {
+  animation-delay: 0.7s;
+}
+
+ul li:nth-child(9) {
+  animation-delay: 0.8s;
+}
+
+ul li:nth-child(10) {
+  animation-delay: 0.9s;
+}
+ul li:nth-child(11) {
+  animation-delay: 1s;
+}
+
+/* 
+ul {
+  display: flex;
+}
+
+ul li {
+  font-family: Aboreto;
+  list-style: none;
+  color: rgb(154, 134, 111);
+  font-size: 80px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  transition: 0.5s;
+}
+
+li:nth-child(1):hover {
+  transition-delay: 0;
+  transform: rotate(15deg) translateY(-50px);
+  opacity: 0;
+  filter: blur(10px);
+}
+li:nth-child(2):hover {
+  transition-delay: 0;
+  transform: rotate(15deg) translateY(-50px);
+  opacity: 0;
+  filter: blur(10px);
+}
+
+li:nth-child(3):hover {
+  transition-delay: 0;
+  transform: rotate(15deg) translateY(-50px);
+  opacity: 0;
+  filter: blur(10px);
+}
+
+li:nth-child(4):hover {
+  transition-delay: 0;
+  transform: rotate(15deg) translateY(-50px);
+  opacity: 0;
+  filter: blur(10px);
+}
+
+li:nth-child(5):hover {
+  transition-delay: 0;
+  transform: rotate(15deg) translateY(-50px);
+  opacity: 0;
+  filter: blur(10px);
+}
+li:nth-child(6):hover {
+  transition-delay: 0;
+  transform: rotate(15deg) translateY(-50px);
+  opacity: 0;
+  filter: blur(10px);
+}
+
+li:nth-child(7):hover {
+  transition-delay: 0;
+  transform: rotate(15deg) translateY(-50px);
+  opacity: 0;
+  filter: blur(10px);
+}
+
+li:nth-child(8):hover {
+  transition-delay: 0;
+  transform: rotate(15deg) translateY(-50px);
+  opacity: 0;
+  filter: blur(10px);
+}
+
+li:nth-child(9):hover {
+  transition-delay: 0;
+  transform: rotate(15deg) translateY(-50px);
+  opacity: 0;
+  filter: blur(10px);
+}
+
+li:nth-child(10):hover {
+  transition-delay: 0;
+  transform: rotate(15deg) translateY(-50px);
+  opacity: 0;
+  filter: blur(10px);
+}
+
+li:nth-child(11):hover {
+  transition-delay: 0;
+  transform: rotate(15deg) translateY(-50px);
+  opacity: 0;
+  filter: blur(10px);
+} */
+
+/* about section */
+
+.aboutSection {
+  background-color: rgb(199, 183, 170);
+  height: 100vh;
+  scroll-snap-align: start;
+}
+
+.sthabtme {
+  color: rgb(243, 233, 232);
+  padding-top: 5%;
+  padding-left: 30%;
+}
+
+.card {
+  width: 350px;
+  height: 100px;
+  padding: 20px;
+  color: rgb(126, 83, 51);
+  border-radius: 20px;
+  transition: all 0.5s;
+}
+
+#self1 {
+  background-color: bisque;
+  margin-left: 50%;
+  width: 310px;
+  height: 80px;
+  clip-path: circle(7.5% at 83% 50%);
+}
+
+#self1:hover {
+  clip-path: circle(129.8% at 8% 8%);
+}
+
+#self2 {
+  background-color: rgb(243, 233, 232);
+  clip-path: circle(14.2% at 83% 65%);
+  margin-left: 40%;
+  width: 320px;
+  height: 110px;
+}
+
+#self2:hover {
+  clip-path: circle(129.8% at 8% 8%);
+}
+
+#self3 {
+  background-color: rgb(254, 213, 209);
+  clip-path: circle(10.4% at 81% 66%);
+
+  margin-left: 35%;
+  width: 300px;
+  height: 110px;
+}
+
+#self3:hover {
+  clip-path: circle(129.8% at 8% 8%);
+}
+
+#self4 {
+  background-color: rgb(244, 201, 145);
+  clip-path: circle(12.7% at 81% 66%);
+  margin-left: 25%;
+  width: 450px;
+  height: 150px;
+}
+
+#self4:hover {
+  clip-path: circle(129.8% at 8% 8%);
+}
+
+#self5 {
+  background-color: rgb(215, 183, 207);
+  clip-path: circle(7.5% at 83% 50%);
+  margin-left: 25%;
+  width: 300px;
+  height: 110px;
+}
+
+#self5:hover {
+  clip-path: circle(129.8% at 8% 8%);
+}
+
+#self6 {
+  background-color: rgb(209, 209, 209);
+  clip-path: circle(7.5% at 90% 70%);
+  margin-left: 20%;
+  margin-top: -2%;
+  width: 400px;
+  height: 110px;
+}
+
+#self6:hover {
+  clip-path: circle(129.8% at 8% 8%);
+}
+
+/* project game of life section */
+
+.projectSection {
+  background-color: rgb(243, 233, 232);
+  height: 100vh;
+  scroll-snap-align: start;
+}
+
+.abtmyprj {
+  color: rgb(199, 183, 170);
+  padding-top: 10%;
+  padding-left: 30%;
+}
+
+.btnContainer {
+  padding-left: 30%;
+  padding-top: 15%;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link,
+a:visited {
+  color: rgb(171, 150, 132);
+}
+
+a:hover {
+  color: whitesmoke;
+  text-decoration: bold;
+}
+
+button {
+  background-color: rgb(252, 248, 237);
+  color: rgb(171, 150, 132);
+  border: 3px solid white;
+  padding: 20px 40px;
+  position: relative;
+  font-size: larger;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.4s;
+  overflow: hidden;
+}
+
+button:hover {
+  background-color: rgb(161, 152, 137);
+  color: whitesmoke;
+}
+
+button:before {
+  content: "";
+  background-color: white;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 30px;
+  position: absolute;
+  transform: translateX(-100%) rotate(45deg);
+  transition: all 0.5s;
+}
+
+button:hover:before {
+  transform: translateX(100%) rotate(45deg);
+}
