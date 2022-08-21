@@ -453,7 +453,7 @@ document.querySelector("#plusReproNum").addEventListener("click", function () {
 // Resize window
 
 function windowResized() {
-  resizeCanvas(windowWidth - 100, windowHeight - 300);
+  resizeCanvas(windowWidth - 100, windowHeight - 400);
   columns = floor(windowWidth / unitLength);
   rows = floor(windowHeight / unitLength);
   for (let i = 0; i < columns; i++) {
